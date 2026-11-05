@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Persona: Desigualdade de Acesso à Tecnologia</title>
+  <style>
+    :root {
+      --bg-gradient: linear-gradient(135deg, #0f0c20 0%, #1a103c 50%, #2b1055 100%);
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(168, 85, 247, 0.2);
+      --primary: #9333ea;
+      --primary-light: #c084fc;
+      --accent: #e9d5ff;
+      --text-main: #f3e8ff;
+      --text-muted: #a855f7;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg-gradient);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+    }
+
+    header p {
+      color: #d8b4fe;
+      font-size: 1.1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(12px);
+      border-radius: 16px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #7e22ce, #c084fc);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
+    }
+
+    .profile-title h2 {
+      font-size: 1.6rem;
+      color: #fff;
+    }
+
+    .profile-title p {
+      color: var(--primary-light);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    h3 {
+      color: var(--primary-light);
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    ul {
+      list-style-position: inside;
+      line-height: 1.6;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .quote-box {
+      background: rgba(147, 51, 234, 0.15);
+      border-left: 4px solid var(--primary-light);
+      padding: 1rem;
+      border-radius: 4px;
+      font-style: italic;
+      margin-top: 1rem;
+    }
+
+    .github-box {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px dashed var(--primary-light);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+    }
+
+    .step-list li {
+      counter-increment: step;
+      position: relative;
+      padding-left: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1.8rem;
+      height: 1.8rem;
+      background: var(--primary);
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.8rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #9333ea, #7e22ce);
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(90deg, #a855f7, #9333ea);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Desigualdade de Acesso à Tecnologia</h1>
+      <p>Estudo de Caso & Persona para Trabalho Escolar</p>
+    </header>
+
+    <div class="card">
+      <div class="profile-header">
+        <div class="avatar">LS</div>
+        <div class="profile-title">
+          <h2>Lucas Silva</h2>
+          <p>16 anos • 2º Ano do Ensino Médio • Escola Pública</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div>
+          <h3>📌 Contexto Geral</h3>
+          <ul>
+            <li><strong>Dispositivo:</strong> Celular antigo com tela trincada.</li>
+            <li><strong>Conexão:</strong> Dados móveis limitados e Wi-Fi compartilhado.</li>
+            <li><strong>Moradia:</strong> Bairro periférico com infraestrutura de rede instável.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>⚠️ Principais Dores</h3>
+          <ul>
+            <li>Dificuldade para formatar trabalhos no celular.</li>
+            <li>Ansiedade em relação ao desempenho no ENEM.</li>
+            <li>Falta de tempo no laboratório da escola (poucos PCs).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="quote-box">
+        "Enquanto muitos estudam por plataformas completas com simulados no computador, eu preciso economizar a franquia do celular até para baixar um arquivo PDF."
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🔍 Mapeamento do Problema</h3>
+      <br>
+      <div class="grid-2">
+        <div>
+          <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Quem sente o impacto?</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5;">Alunos sem recursos, professores limitados nas aulas, famílias sobrecarregadas financeiramente e a comunidade escolar diante de baixos rendimentos institucionais.</p>
+        </div>
+        <div>
+          <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Quando o problema surge?</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5;">Diariamente nas pesquisas de casa, no envio de tarefas fora da escola e, principalmente, durante a preparação para o ENEM e vestibulares.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🚀 Como Publicar este Site no GitHub Pages</h3>
+      <p style="margin-bottom: 1rem; color: #d8b4fe;">Siga os passos abaixo para gerar um link público gratuito para seu trabalho:</p>
+      
+      <div class="github-box">
+        <ol class="step-list">
+          <li>Crie uma conta gratuita em <strong>github.com</strong>.</li>
+          <li>Clique no botão <strong>"New"</strong> para criar um novo repositório.</li>
+          <li>Dê o nome ao repositório (ex: <code>meu-trabalho-escola</code>) e marque como <strong>Public</strong>.</li>
+          <li>Envie este arquivo com o nome exato de <code>index.html</code>.</li>
+          <li>Vá em <strong>Settings</strong> > <strong>Pages</strong> (no menu lateral).</li>
+          <li>Em <em>Source</em>, selecione a branch <code>main</code> e clique em <strong>Save</strong>.</li>
+          <li>Seu link ficará disponível após alguns minutos!</li>
+        </ol>
+      </div>
+
+      <button class="btn" onclick="navigator.clipboard.writeText(window.location.href); alert('Link copiado com sucesso!');">
+        📋 Copiar Link Desta Página
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
